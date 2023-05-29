@@ -4,7 +4,7 @@ API em FastAPI
 ##  - Como configurar 🧑‍💻
 Primeiro clone este projeto usando:
 ```
-git clone https://github.com/LuanCarvalho0/gerador-dados-falsos
+git clone https://github.com/LuanCarvalho0/Desafio-2.git
 ```
 Depois disso, abra seu terminal na pasta do projeto e execute:
 ```
