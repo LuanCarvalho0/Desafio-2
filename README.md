@@ -1,6 +1,17 @@
 # Desafio-2
 API em FastAPI
 
+##  - Como configurar 🧑‍💻
+Primeiro clone este projeto usando:
+```
+git clone https://github.com/LuanCarvalho0/gerador-dados-falsos
+```
+Depois disso, abra seu terminal na pasta do projeto e execute:
+```
+pip install -r requisitos.txt
+```
+Depois disso é só executar o comando "uvicorn main:app --reload" para iniciar a aplicação e tudo deve estar funcionando! 👌
+
 # Documentação da API CRUD PRODUTOS
 
 ## Visão geral
