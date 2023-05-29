@@ -24,13 +24,31 @@ Retorna uma lista de todos os produtos disponíveis.
     ```json
     [
       {
-        "id": 1,
-        "nome": "Recurso 1"
-      },
-      {
-        "id": 2,
-        "nome": "Recurso 2"
-      }
+        "productKey": 214,
+        "productSubcategoryKey": 31,
+        "productSKU": "HL-U509-R",
+        "productName": "Sport-100 Helmet, Red",
+        "modelName": "Sport-100",
+        "productDescription": "Universal fit, well-vented, lightweight , snap-on visor.",
+        "productColor": "Red",
+        "productSize": "0",
+        "productStyle": "0",
+        "productCost": 13.0863,
+        "productPrice": 34.99
+    },
+    {
+        "productKey": 215,
+        "productSubcategoryKey": 31,
+        "productSKU": "HL-U509",
+        "productName": "Sport-100 Helmet, Black",
+        "modelName": "Sport-100",
+        "productDescription": "Universal fit, well-vented, lightweight , snap-on visor.",
+        "productColor": "Black",
+        "productSize": "0",
+        "productStyle": "0",
+        "productCost": 12.0278,
+        "productPrice": 33.6442
+    }
     ]
     ```
 
@@ -45,8 +63,17 @@ Retorna os detalhes de um produto específico.
   - **Exemplo de resposta:**
     ```json
     {
-      "id": 1,
-      "nome": "Recurso 1"
+        "productKey": 214,
+        "productSubcategoryKey": 31,
+        "productSKU": "HL-U509-R",
+        "productName": "Sport-100 Helmet, Red",
+        "modelName": "Sport-100",
+        "productDescription": "Universal fit, well-vented, lightweight , snap-on visor.",
+        "productColor": "Red",
+        "productSize": "0",
+        "productStyle": "0",
+        "productCost": 13.0863,
+        "productPrice": 34.99
     }
     ```
 
@@ -56,13 +83,32 @@ Cria um novo produto.
 - **URL:** `/products`
 - **Método:** POST
 - **Parâmetros da solicitação:**
-  - `nome` (string) - O nome do novo recurso.
+  - `productKey` (inteiro) 
+  - `productSubcategoryKey` (inteiro) 
+  - `productSKU` (string)
+  - `productName` (string)
+  - `modelName` (string)
+  - `productDescription` (string)
+  - `productColor` (string)
+  - `productSize` (string)
+  - `productStyle` (string)
+  - `productCost` (float)
+  - `productPrice` (float)
 - **Resposta de sucesso:** 201 Created
   - **Exemplo de resposta:**
     ```json
     {
-      "id": 3,
-      "nome": "Novo Recurso"
+        "productKey": 214,
+        "productSubcategoryKey": 31,
+        "productSKU": "HL-U509-R",
+        "productName": "Sport-100 Helmet, Red",
+        "modelName": "Sport-100",
+        "productDescription": "Universal fit, well-vented, lightweight , snap-on visor.",
+        "productColor": "Red",
+        "productSize": "0",
+        "productStyle": "0",
+        "productCost": 13.0863,
+        "productPrice": 34.99
     }
     ```
 
@@ -74,13 +120,22 @@ Atualiza os detalhes de um produto existente.
 - **Parâmetros da URL:**
   - `id_produto` (inteiro) - O ID do produto a ser atualizado.
 - **Parâmetros da solicitação:**
-  - `nome` (string) - O novo nome do recurso.
+  - `productName` (string) - O novo nome do produto.
 - **Resposta de sucesso:** 200 OK
   - **Exemplo de resposta:**
     ```json
     {
-      "id": 3,
-      "nome": "Recurso Atualizado"
+        "productKey": 214,
+        "productSubcategoryKey": 31,
+        "productSKU": "HL-U509-R",
+        "productName": "Sport-100 Helmet, Red",  (Recurso atualizado)
+        "modelName": "Sport-100",
+        "productDescription": "Universal fit, well-vented, lightweight , snap-on visor.",
+        "productColor": "Red",
+        "productSize": "0",
+        "productStyle": "0",
+        "productCost": 13.0863,
+        "productPrice": 34.99
     }
     ```
 
@@ -90,5 +145,10 @@ Exclui um produto existente.
 - **URL:** `/products/{id_produto}`
 - **Método:** DELETE
 - **Parâmetros da URL:**
-  - `id` (inteiro) - O ID do produto a ser excluído.
+  - `id_produto` (inteiro) - O ID do produto a ser excluído.
 - **Resposta de sucesso:** 204 No Content
+ ```json
+ {
+   "Produto Excluido com Sucesso! {'productName': 'Road-750 Black, 52', 'productDescription': 'Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.', 'productSize': '52', 'productCost': 343.6496, 'modelName': 'Road-750', 'productSubcategoryKey': 2, 'productSKU': 'BK-R19B-52', 'productKey': 606, 'productColor': 'Black', 'productStyle': 'U', 'productPrice': 539.99}"
+   }
+   ```
